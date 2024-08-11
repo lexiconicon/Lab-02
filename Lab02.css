@@ -95,10 +95,10 @@ ol li {
 }
 /* box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) */
 /*  instead of spelling out every margin, if they are all the same you can just put margin: 1rem */
+/* the solution puts the border radius on a separate line, but that doesn't make sense to me since isn't it the box shadow we are adding the radius to? */
 img {
   margin: 1rem;
   box-shadow: 2px 2px 2px 1px rgb(0, 0, 0, 0.5);
-  
 }
 /* font color of rgb(0, 58, 66) Idk how to do this wrapping thing */
 figcaption {
@@ -115,10 +115,11 @@ footer {
 }
 
 /* ---CUSTOM CLASS NAME SELECTORS--- */
-
+/* it took forever to figure this out, but the key is to put the flex wrap for the entire div too, not just the caption */
 .banner-div {
   display: flex;
   justify-content: center;
+  flex-wrap:wrap;
 }
 #banner-long {
   max-width: 100%;
@@ -128,10 +129,11 @@ footer {
   width: 230px;
   display: none;
 }
-/* got stuck here */
+/* got stuck here. ohhhh there's a space around option */
 .img-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .tips-div {
@@ -142,8 +144,9 @@ footer {
 .top-places-div {
   max-width: 800px;
   margin: 5rem auto;
-  color: rgb(253, 197, 132);
+  color: rgb(0, 58, 66);
   padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 .top-places-div h2 {
   text-align: center;
@@ -161,6 +164,8 @@ footer {
 
 @media only screen and (max-width: 1100px) {
   .tips-div {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

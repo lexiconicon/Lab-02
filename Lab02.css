@@ -68,18 +68,16 @@ html {
   font-family: Calibri, 'Trebuchet MS', sans-serif;
   background: linear-gradient(180deg, #84daf5, #89ffff, #affffa, #ffffff);
 }
-/* Here I added the margins for the body section */
+/* Here I added the margins for the body section. if the top margins are the same and the bottom margins are the same, you can just list those two  */
 body {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin: 1rem 5rem;
 }
 /* Here I added the drop shadow for the title */
 h1 {
   text-align: center;
   filter: drop-shadow(2px 2px 1px #0f6a9e);
 }
+
 h2 {
   margin: 4rem auto 1rem auto;
   text-align: center;
@@ -96,12 +94,9 @@ ol li {
   padding: 10px 0;
 }
 /* box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) */
+/*  instead of spelling out every margin, if they are all the same you can just put margin: 1rem */
 img {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-radius: 1rem;
+  margin: 1rem;
   box-shadow: 2px 2px 2px 1px rgb(0, 0, 0, 0.5);
   
 }
